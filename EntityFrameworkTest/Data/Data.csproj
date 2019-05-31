@@ -49,11 +49,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Configuration\AccountConfiguration.cs" />
+    <Compile Include="Configuration\AdressConfiguration.cs" />
+    <Compile Include="Configuration\BranchConfiguration.cs" />
+    <Compile Include="Configuration\CustomerConfiguration.cs" />
+    <Compile Include="Configuration\TransactionConfiguration.cs" />
+    <Compile Include="Context\DataWorker.cs" />
+    <Compile Include="Context\IDataWorker.cs" />
+    <Compile Include="Context\IDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FrameWork\Entities.csproj">
+      <Project>{eb727b15-8711-4eda-9863-2e306fc5db54}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

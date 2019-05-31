@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrameWork
+namespace Entities
 {
     public class Account:BaseEntity<long>
     {
@@ -22,7 +22,7 @@ namespace FrameWork
         public virtual Branch Branch { get; set; }
 
         public virtual ICollection<Customer> Owners { get; set; } = new HashSet<Customer>();
-        public virtual ICollection<Customer> Disponent { get; set; } = new HashSet<Customer>();
+        public virtual ICollection<Customer> Disponents { get; set; } = new HashSet<Customer>();
         public virtual ICollection<Transaction> Transactions { get; set; } = new HashSet<Transaction>();
     }
 }
