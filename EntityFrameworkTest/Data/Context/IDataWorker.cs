@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,10 @@ namespace Data.Context
 {
     public interface IDataWorker: IDisposable, IDBContext
     {
-
+        AdressRepository Adresses { get; }
+        AccountRepository Accounts { get; }
+        BranchRepository Branches { get; }
+        CustomerRepository Customers { get; }
+        TransactionRepository Transactions { get; }
     }
 }

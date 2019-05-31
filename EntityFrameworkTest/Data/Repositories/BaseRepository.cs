@@ -35,17 +35,17 @@ namespace Data.Repositories
 
         public List<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return DbSet.AsQueryable().ToList();
         }
 
         public List<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return DbSet.AsQueryable().Where(predicate).ToList();
         }
 
         public TEntity GetById(TKey id)
         {
-            throw new NotImplementedException();
+            return DbSet.Find(id);
         }
 
         public TEntity Update(TEntity entity)
